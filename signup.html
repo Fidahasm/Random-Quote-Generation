@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+
+    <form id="signup-form" action="/home.html" method="get">
+
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+      </div>
+
+      <div class="input-group">
+        <label for="remember-me">
+          <input type="checkbox" name="remember-me" id="remember-me"> Remember me
+        </label>
+      </div>
+
+      <div class="input-group" >
+        
+        <button type="submit" class="signup" id="btn" onclick="window.location.href = '/home.html'" style="text-align: center;" >Sign Up</button>
+     
+
+      
+      </div>
+    </form>
+  </div>
+</body>
+</html>

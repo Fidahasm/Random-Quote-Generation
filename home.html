@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link href="style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+<nav class="navbar">
+    <h1 id="abc">Random Quote Generator</h1>
+    <!-- <ul >
+        
+        <li><a class="nav-link" href="">Home</a></li>
+        <li><a class="nav-link" href="">About</a></li>
+        
+    </ul> -->
+</nav>
+
+
+<div id="quote"></div>
+
+<div class="button-container">
+    <button class="motivation-button" onclick="displayRandomQuote('Motivational')">Motivation</button>
+    <button class="time-button"  onclick="displayRandomQuote('Funny')">Funny</button>
+    <button class="fun-button" onclick="displayRandomQuote('Wisdom')">Wisdom</button>
+    <button class="category-button" onclick="displayRandomQuote('Inspirational')">Inspirational</button>
+
+</div>
+
+
+<script>
+const quotesByCategory = {
+    "Motivational": [
+      "The only way to do great work is to love what you do. - Steve Jobs",
+      "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+      "Stay hungry, stay foolish. - Steve Jobs",
+      "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+      "Believe you can and you're halfway there. - Theodore Roosevelt",
+      "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+      "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+      "It does not matter how slowly you go as long as you do not stop. - Confucius",
+      "The only true wisdom is in knowing you know nothing. - Socrates",
+      "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela"
+    ],
+    "Funny": [
+      "I am so clever that sometimes I don't understand a single word of what I am saying. - Oscar Wilde",
+      "Get your facts first, then you can distort them as you please. - Mark Twain",
+      "Behind every great man is a woman rolling her eyes. - Jim Carrey",
+      "I haven't spoken to my wife in years. I didn't want to interrupt her. - Rodney Dangerfield",
+      "The four most beautiful words in our common language: I told you so. - Gore Vidal"
+    ],
+    "Wisdom": [
+      "Knowing yourself is the beginning of all wisdom. - Aristotle",
+      "The only true wisdom is in knowing you know nothing. - Socrates",
+      "Honesty is the first chapter in the book of wisdom. - Thomas Jefferson",
+      "Patience is the companion of wisdom. - Saint Augustine",
+      "By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest. - Confucius"
+    ],
+    "Inspirational": [
+      "The only thing we have to fear is fear itself. - Franklin D. Roosevelt",
+      "Life is what happens when you're busy making other plans. - John Lennon",
+      "The only way to do great work is to love what you do. - Steve Jobs",
+      "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
+      "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela"
+    ]
+  };
+
+  // Function to display a random quote from the selected category
+  function displayRandomQuote(category) {
+    // Get quotes from the selected category
+    const quotes = quotesByCategory[category];
+    if (!quotes) return; // If category doesn't exist, do nothing
+    
+    // Get random quote from the selected category
+    const randomNumber = Math.floor(Math.random() * quotes.length);
+    const quoteElement = document.getElementById('quote');
+    quoteElement.textContent = quotes[randomNumber];
+  }
+</script>
+    </body>
+</html>
